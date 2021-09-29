@@ -38,6 +38,7 @@ export default function MoviesPage() {
     }
     setQuery(searchValue.toLowerCase());
     history.push({ ...location, search: `query=${searchValue.toLowerCase()}` });
+    console.log(location);
   };
 
   return (
@@ -58,10 +59,25 @@ export default function MoviesPage() {
         </button>
       </form>
       {movies && (
-        <ul>
+        <ul className="movie-list">
           {movies.map(movie => (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>{movie.original_title}</Link>
+            <li key={movie.id} className="list-item">
+              <Link
+                to={{
+                  pathname: `/movies/${movie.id}`,
+                  state: {
+                    from: location,
+                  },
+                }}
+              >
+                {' '}
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.original_title}
+                  className="movie-poster"
+                />
+                <h4 className="list-title">{movie.original_title}</h4>
+              </Link>
             </li>
           ))}
         </ul>

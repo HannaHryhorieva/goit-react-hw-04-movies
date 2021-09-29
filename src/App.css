@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+img {
+  display: block;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-poster {
+  width: 300px;
+  height: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-item {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.movie-list {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+}
+.list-title {
+  font-size: 16px;
+}
+.SearchForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.SearchForm-button {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  outline: none;
+}
+.SearchForm-button:hover {
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SearchForm-button-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.SearchForm-input {
+  display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.SearchForm-input::placeholder {
+  font: inherit;
+  font-size: 18px;
+}
+
+.movie-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+.movie-card-img {
+  width: 400px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: 1px solid plum;
+}
+.movie-card-img img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.movie-description {
+  width: 600px;
+}
+.card-container {
+  margin-bottom: 30px;
+}
+.movie-genre {
+  margin-right: 10px;
+}
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 12px;
+}
+
+.active-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2196f3;
+  font-size: 16px;
+}
+.button-goback {
+  margin: 20px;
+  border-radius: 5px;
+}
+.actor-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.actor-list li {
+  margin-bottom: 20px;
+  width: 150px;
+  margin-right: 20px;
+}
+.actor-card {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+}
+.actor-card img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.actor-description {
+  display: block;
+  font-size: 12px;
+  margin: 5px;
 }
