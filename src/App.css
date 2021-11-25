@@ -11,15 +11,23 @@ li {
 .list-item {
   margin-bottom: 10px;
   margin-right: 10px;
+  width: 300px;
 }
 .movie-list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
 }
 .list-title {
+  padding: 5px;
+  margin: 0;
   font-size: 16px;
+  font-weight: 500;
+  color: #2a363b;
+}
+.movie-link {
+  text-decoration: none;
 }
 .SearchForm {
   display: flex;

@@ -6,7 +6,6 @@ import { fetchTrendingMovies } from '../apiServices/apiServices';
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
   const location = useLocation();
-  // const { url } = useRouteMatch();
   useEffect(() => {
     if (movies.length !== 0) {
       return;
@@ -27,6 +26,7 @@ export default function HomePage() {
                   pathname: `/movies/${movie.id}`,
                   state: { from: location },
                 }}
+                className="movie-link"
               >
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
